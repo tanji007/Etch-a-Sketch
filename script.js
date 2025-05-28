@@ -2,7 +2,7 @@
 const container = document.querySelector(".container");
 let n = 16
 let size = `${500 / n}px`
-let color = "red"
+let color = "black"
 let boxes
 let isMouseDown = false;
 let isRainbow = false;
@@ -67,7 +67,7 @@ function rainbowColor() {
 // Applying color to box
 
 function applyColor(box) {
-    box.style.backgroundColor = isRainbow ? rainbowColor() : "black";
+    box.style.backgroundColor = isRainbow ? rainbowColor() : color;
 }
 
 // Reset Functiom
@@ -101,3 +101,15 @@ function gridSize() {
     }
     return inputSize
 }
+
+let colorInput = document.querySelector("#colorInput")
+colorInput.addEventListener("input",()=>{
+    color = colorInput.value;
+    isRainbow = false;
+
+})
+colorInput.addEventListener("click",()=>{
+    color = colorInput.value;
+    isRainbow = false;
+})
+

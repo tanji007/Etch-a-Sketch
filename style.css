@@ -8,12 +8,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Crayon';
-    user-select: none;      /* Prevents text selection */
+    user-select: none;
+    /* Prevents text selection */
     outline: none;
 }
 
 body {
-   
+
     background: url(watercolor-paper-texture_1194-5417.avif);
     display: flex;
     flex-direction: column;
@@ -23,14 +24,15 @@ body {
     background-color: rgb(249, 249, 249);
 
 }
-.text{
+
+.text {
     margin-bottom: 10px;
     font-size: 60px;
     color: rgb(255, 23, 23);
     font-weight: bold;
 }
 
-main{
+main {
     width: auto;
     display: flex;
     flex-direction: column;
@@ -38,13 +40,15 @@ main{
     align-items: center;
     gap: 20px;
 }
-.buttons{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
-button{
-    background : yellow;
+
+button {
+    background: yellow;
     border-top: 2px solid black;
     border-left: 2px solid black;
     border-right: 4px solid black;
@@ -62,6 +66,37 @@ button:active {
     border-top: 4px solid black;
     border-left: 4px solid black;
 }
+
+#colorInput {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* WebKit fix for internal wrapper */
+#colorInput::-webkit-color-swatch-wrapper {
+    padding: 0;
+    margin: 0;
+
+}
+
+/* Swatch fix */
+#colorInput::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+
+}
+
 
 .container {
     display: flex;
@@ -83,6 +118,5 @@ button:active {
 .box {
 
     background-color: rgb(245, 245, 245);
-   
-    
+
 }
